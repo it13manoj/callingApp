@@ -1,0 +1,17 @@
+{
+  "name": "callapp-fullstack",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server/src/server.js",
+    "server": "node server/src/server.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm --prefix client run build",
+    "build:apk": "npm run build && cd client && npx cap sync android && cd android && .\\gradlew.bat assembleDebug && cd ..\\.. && copy client\\android\\app\\build\\outputs\\apk\\debug\\app-debug.apk NexCall-debug.apk"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

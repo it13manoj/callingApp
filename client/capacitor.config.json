@@ -1,0 +1,12 @@
+{
+  "appId": "com.nexcall.app",
+  "appName": "NexCall",
+  "webDir": "dist",
+  "server": {
+    "cleartext": true,
+    "androidScheme": "http"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}
